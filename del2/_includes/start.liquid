@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="terminal-window">
+      <header class="terminal-header">
+        <span class="dot close"></span>
+        <span class="dot minimize"></span>
+        <span class="dot maximize"></span>
+        <p class="title">bedda145@ubuntu: ~</p>
+      </header>
+
+      <main class="terminal-body">
+        <nav>
+          <p><span class="prompt">bedda145@ubuntu:~$</span> ls -l /sidor</p>
+          <ul class="menu">
+            <li><a href="/">index.html</a></li>
+            <li><a href="/about">about.html</a></li>
+            <li><a href="/archive">archive.html</a></li>
+          </ul>
+        </nav>
+
+        <section id="content">
+          <p>
+            <span class="prompt">bedda145@ubuntu:~$</span> ./ladda_inlägg.sh <span class="cursor"></span>
+          </p>
+          <h1>Senaste projekten...</h1>
+
+          {% for post in collections.post %}
+            <article class="post">
+              <h2>
+                <a href="{{ post.url }}">{{ post.data.title }}</a>
+              </h2>
+              <p>Uppladdad: {{ post.date | date: "%Y-%m-%d" }}</p>
+            </article>
+          {% endfor %}
+
+        </section>
+      </main>
+    </div>
+    <script src="/assets/dist/main.js"></script>
+  </body>
+</html>

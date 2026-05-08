@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bedda145@ubuntu: ~/arkiv</title>
+    <link rel="stylesheet" href="/assets/style.css">
+  </head>
+  <body>
+    <div class="terminal-window">
+      <header class="terminal-header">
+        <span class="dot close"></span>
+        <span class="dot minimize"></span>
+        <span class="dot maximize"></span>
+        <p class="title">bedda145@ubuntu: ~/arkiv</p>
+      </header>
+
+      <main class="terminal-body">
+        <nav>
+          <p><span class="prompt">bedda145@ubuntu:~arkiv$</span> cd ..</p>
+          <ul class="menu">
+            <li>
+              <a href="/index.html">&lt;- Tillbaka till start (cd /home)</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section id="content">
+          <p>
+            <span class="prompt">bedda145@ubuntu:~arkiv$</span> ls -l
+            --group-directories-first
+          </p>
+
+          <article class="single-post">
+            <h1>Arkiv & Taggar</h1>
+            <p>Klicka på katalog för att filtrera inläggen:</p>
+
+            <div class="tag-cloud">
+              <button class="filter-btn" data-filter="all">
+                ./visa_alla.sh
+              </button>
+              <button class="filter-btn" data-filter="kod">
+                drwxr-xr-x projekt
+              </button>
+              <button class="filter-btn" data-filter="skola">
+                drwxr-xr-x kod
+              </button>
+              <button class="filter-btn" data-filter="teknik">
+                drwxr-xr-x gaming
+              </button>
+            </div>
+
+            <div id="archive-list">
+              <p>
+                <span class="prompt">bedda145@ubuntu:~/arkiv$</span> tree
+                ./inlägg
+              </p>
+
+              <article class="post-item" data-tag="projekt kod gaming">
+                <span>├── [2026-03-13]</span>
+                <a href="/post/biginfo/"
+                  >ARC Raiders Loadout Builder</a
+                >
+              </article>
+              <article class="post-item" data-tag="projekt kod gaming">
+                <span>└── [2026-03-13]</span>
+                <a href="garden-horizons-calc.html"
+                  >Garden Horizons Calculator</a
+                >
+              </article>
+            </div>
+
+            <p class="eof">-- END OF DIRECTORY --</p>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="/assets/dist/main.js"></script>
+  </body>
+</html>

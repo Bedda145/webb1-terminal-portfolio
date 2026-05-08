@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="terminal-window">
+      <header class="terminal-header">
+        <span class="dot close"></span>
+        <span class="dot minimize"></span>
+        <span class="dot maximize"></span>
+        <p class="title">bedda145@ubuntu: ~/inlägg/{{ title | slugify }}</p>
+      </header>
+
+      <main class="terminal-body">
+        <nav>
+          <p><span class="prompt">bedda145@ubuntu:~$</span> ls -l /sidor</p>
+          <ul class="menu">
+            <li><a href="/">index.html</a></li>
+            <li><a href="/about">about.html</a></li>
+            <li><a href="/archive">archive.html</a></li>
+          </ul>
+        </nav>
+
+        <section id="content">
+          <ul class="menu">
+            <li><a href="/">&lt;- Tillbaka till start (cd /home)</a></li>
+          </ul>
+          
+          <p><span class="prompt">bedda145@ubuntu:~/inlägg$</span> cat inlägg.md <span class="cursor"></span></p>
+          
+          <h1>{{ title }}</h1>
+          <span class="date">Uppladdad: {{ date | date: "%Y-%m-%d" }}</span>
+          
+          <div class="article -content">
+            {{ content }}
+          </div>
+
+        </section>
+      </main>
+    </div>
+    <script src="/assets/dist/main.js"></script>
+  </body>
+</html>
